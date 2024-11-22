@@ -1,0 +1,64 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+}
+
+.grid-container {
+    max-width: 1200px;
+    margin: 1rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 15px;
+    grid-template-areas: 
+            "a a b b b b"
+            "a a c c d d"
+            "a a c c e e"
+            "f f f g i i"
+            "f f f h i i";
+}
+
+.grid-item {
+    display: flex;
+    border-radius: 14px;
+    background-color: red;
+    padding: 20px 65px;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.grid-item-1 {
+
+    grid-area: a;
+}
+.grid-item-2 {
+    grid-area: b;
+}
+.grid-item-3 {
+    grid-area: c;
+}
+.grid-item-4 {
+    grid-area: d;
+}
+.grid-item-5 {
+    grid-area: e;
+}
+.grid-item-6 {
+    grid-area: f;
+}
+.grid-item-7 {
+    grid-area: g;
+}
+.grid-item-8 {
+    grid-area: h;
+}
+.grid-item-9 {
+    grid-area: i;
+}
