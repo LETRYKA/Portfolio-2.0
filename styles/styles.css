@@ -74,10 +74,10 @@ a {
 .menu-container {
     width: 306px;
     height: 44px;
-    background: rgba( 6, 6, 6, 0.25 );
+    background: rgba(6, 6, 6, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 1, 15, 0.37);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid #262626;
     border-radius: 50px;
     color: #FFFF;
@@ -89,8 +89,8 @@ a {
     height: 32px;
     background: rgba(39, 39, 39, 0.432);
     box-shadow: 0 8px 32px 0 rgba(39, 39, 39, 0.37);
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 50px;
     cursor: pointer;
     font-size: 13px;
@@ -201,18 +201,21 @@ a {
 }
 
 .grid-item-7 {
-    padding: auto;
+    padding: 0;
     grid-area: g;
 }
 
 .grid-item-8 {
-    padding: auto;
+    padding: 0;
     grid-area: h;
 }
 
 .grid-item-9 {
+    align-items: center;
     padding: 0;
     grid-area: i;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Inside items */
@@ -228,6 +231,10 @@ a {
     display: flex;
     align-items: start;
     margin-left: 20px;
+}
+
+#profile p:hover {
+    margin-left: 5px;
 }
 
 .avatar {
@@ -254,8 +261,7 @@ a {
 }
 
 .status {
-    width: 160px;
-    height: 31px;
+    padding: 5px 10px 5px 10px;
     background: rgb(24, 25, 33);
     background: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
     border: 1px solid #262626;
@@ -276,7 +282,7 @@ a {
 .active {
     width: 9px;
     height: 9px;
-    background-color: #6DD33D;
+    background-color: #f0f80b;
     border-radius: 50px;
 }
 
@@ -406,7 +412,6 @@ a {
     height: 100%;
     background: rgb(23, 24, 32);
     background: linear-gradient(-90deg, rgba(23, 24, 32, 1) 10%, rgba(17, 17, 20, 0) 52%);
-
     z-index: 10;
 }
 
@@ -554,9 +559,66 @@ a {
     margin-right: 10px !important;
 }
 
+/* Weblog */
+
+.log-ovrl {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 53%, rgba(23, 24, 32, 1) 100%);
+}
+
+.log-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #202b37;
+    border-radius: 50px;
+}
+
+.grid-item-9 h1 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.grid-item-9 p {
+    margin: 0;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.grid-item-9 h2 {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.status-btn {
+    font-size: 10px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 50px;
+    border: 1px solid #262626;
+    margin-top: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.line {
+    left: 45px;
+    height: 100%;
+    position: absolute;
+    border-left: 1px dashed #616161;
+    z-index: 1;
+}
+
 
 
 @media only screen and (max-width: 1100px) {
+
+    .img-holder {
+        padding: 0px 0 0px 0;
+    }
 
     .grid-container {
         grid-template-areas:
@@ -581,17 +643,32 @@ a {
             "e e"
             "c c"
             "c c"
-            "g h"
-            "g h"
+            "g g"
+            "h h"
             "f f"
             "f f"
             "i i"
             "i i";
     }
 
-    .grid-item-3 {
+    .img-holder {
+        padding: 100px 0 100px 0;
+    }
 
+    .grid-item-3 {
         grid-area: c;
+    }
+
+    .grid-item-7 {
+        padding: 20px 0 20px 0;
+    }
+
+    .grid-item-8 {
+        padding: 20px 0 20px 0;
+    }
+
+    .grid-item-9 {
+        height: 300px;
     }
 
     .projects-container {
