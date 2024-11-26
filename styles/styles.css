@@ -1,7 +1,80 @@
+/* Monument */
+
+@font-face {
+    font-family: 'Monument Extended Ultra Light';
+    src: url('fonts/MonumentExtended-Ultralight.otf');
+}
+
+@font-face {
+    font-family: 'Monument Extended Light';
+    src: url('fonts/MonumentExtended-Light.otf');
+}
+
+@font-face {
+    font-family: 'Monument Extended Regular';
+    src: url('fonts/MonumentExtended-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Monument Extended Bold';
+    src: url('fonts/MonumentExtended-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Monument Extended Ultra Bold';
+    src: url('fonts/MonumentExtended-Ultrabold.otf');
+}
+
+/* General Sans */
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('General Sans Regular'), url('fonts/GeneralSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('General Sans Extralight'), url('fonts/GeneralSans-Extralight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: local('General Sans Light'), url('fonts/GeneralSans-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('General Sans Medium'), url('fonts/GeneralSans-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('General Sans Semibold'), url('fonts/GeneralSans-Semibold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('General Sans Bold'), url('fonts/GeneralSans-Bold.woff') format('woff');
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    font-family: "Manrope", sans-serif;
+    font-family: General Sans, Sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -17,6 +90,7 @@ body {
         linear-gradient(to bottom, #80808012 1px, transparent 1px);
     background-size: 70px 70px;
 }
+
 
 h1,
 h2,
@@ -117,7 +191,6 @@ a {
 
 .projects-container {
     max-width: 1150px;
-    margin: 1rem;
     display: grid;
     grid-auto-columns: 1fr;
     gap: 15px;
@@ -247,15 +320,16 @@ a {
 
 #profile h1 {
     color: white;
-    font-size: 1.7em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-family: Monument Extended Ultra Light;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     margin: 0px 0 2px 0px;
 }
 
 #profile p {
     margin: 0;
     font-size: 14px;
-    font-weight: 400;
     color: #999999;
     margin-bottom: 18px;
 }
@@ -329,7 +403,7 @@ a {
 
 .text-wrapper h1 {
     color: #999999;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     white-space: nowrap;
     padding: 0 1rem;
@@ -368,7 +442,7 @@ a {
 }
 
 .grid-item-4 h4 {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: white;
 }
@@ -376,6 +450,8 @@ a {
 .grid-item-4 h1 {
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: Monument Extended Ultra Light;
+    letter-spacing: 1px;
     color: white;
 }
 
@@ -535,6 +611,7 @@ a {
 
 .title h1 {
     font-size: 30px;
+    font-weight: 600;
     color: white;
 }
 
@@ -584,7 +661,7 @@ a {
     margin: 0;
     color: #999999;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .grid-item-9 h2 {
@@ -611,7 +688,6 @@ a {
     border-left: 1px dashed #616161;
     z-index: 1;
 }
-
 
 
 @media only screen and (max-width: 1100px) {
