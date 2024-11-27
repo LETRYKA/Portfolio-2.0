@@ -13,6 +13,7 @@
 
 <body>
     <div id="home"></div>
+
     <!--- Header --->
 
     <div id="nav-global" class="center">
@@ -26,38 +27,43 @@
             <a href="#conctact">
                 <div class="menu-items center">Contact</div>
             </a>
+            <a href="#conctact">
+                <div id="mode" class="menu-items center"><lord-icon id="icon5" src="styles/img/sun.json" trigger="click"
+                        stroke="light" state="hover-pinch" color=" #FFFFFF" style="width:23px;height:23px;">
+                    </lord-icon></div>
+            </a>
         </div>
     </div>
 
     <!--- Bento Box Container --->
 
     <div class="grid-container">
-        <div class="grid-item grid-item-1 center">
+        <div id="red" class="grid-item grid-item-1 center">
             <div class="hover"></div>
             <div class="profile-container row">
                 <div class="avatar center"><img width="100px" src="styles/img/pig.png" alt=""></div>
                 <div id="profile" class="column">
-                    <h1>Ariunbileg. B</h1>
-                    <p class="transition">Im Software <a style="color: #916CE7;">Engineer</a></p>
+                    <h1 class="text">Ariunbileg. B</h1>
+                    <p class="transition">Im Software <a style="color: var(--secondary-color)">Engineer</a></p>
                     <div class="status center">
                         <div class="circle center">
                             <div class="active"></div>
-                        </div>Working on project
+                        </div><span class="text">Working on project</span>
                     </div>
                 </div>
             </div>
-            <div style=" border: 1px solid #262626; border-radius: 14px; height: 94px; margin-top: 25px;"
+            <div style=" border: 1px solid var(--border); border-radius: 14px; height: 94px; margin-top: 25px;"
                 class="about-container row center">
                 <div class="category-container row">
-                    <div class="category"><i style="color: #916CE7; margin-right: 5px;"
+                    <div class="category"><i style="color: var(--secondary-color); margin-right: 5px;"
                             class="fa-solid fa-location-dot"></i>Mongolia</div>
-                    <div class="category"><i style="color: #916CE7; margin-right: 5px;"
+                    <div class="category"><i style="color: var(--secondary-color); margin-right: 5px;"
                             class="fa-solid fa-globe"></i>English & Mongolian</div>
-                    <div class="category"><i style="color: #916CE7; margin-right: 5px;"
+                    <div class="category"><i style="color: var(--secondary-color); margin-right: 5px;"
                             class="fa-solid fa-location-dot"></i>S3</div>
-                    <div class="category"><i style="color: #916CE7; margin-right: 5px;"
+                    <div class="category"><i style="color: var(--secondary-color); margin-right: 5px;"
                             class="fa-solid fa-location-dot"></i>S3</div>
-                    <div class="category"><i style="color: #916CE7; margin-right: 5px;"
+                    <div class="category"><i style="color: var(--secondary-color); margin-right: 5px;"
                             class="fa-solid fa-location-dot"></i>English & Mongolian</div>
                 </div>
             </div>
@@ -92,23 +98,24 @@
                 <h1>RESUME</h1>
             </div>
             <div style="margin-right: 40px;" class="row center">
-                <a href="CV.pdf" download><lord-icon src="styles/img/download.json" trigger="click" stroke="light"
-                        state="hover-pinch" color=" #FFFFFF" style="width:35px;height:35px; margin-right: 8px;">
+                <a href="CV.pdf" download><lord-icon id="icon" src="styles/img/download.json" trigger="click"
+                        stroke="light" state="hover-pinch" color=" #FFFFFF"
+                        style="width:35px;height:35px; margin-right: 8px;">
                     </lord-icon></a>
-                <a href="CV.pdf" target="_blank"><lord-icon src="styles/img/eye.json" trigger="click" stroke="light"
-                        state="hover-pinch" color=" #FFFFFF" style="width:40px;height:40px">
+                <a href="CV.pdf" target="_blank"><lord-icon id="icon2" src="styles/img/eye.json" trigger="click"
+                        stroke="light" state="hover-pinch" color=" #FFFFFF" style="width:40px;height:40px">
                     </lord-icon></a>
             </div>
         </div>
 
         <div class="grid-item grid-item-5 center">
             <div class="switch-btn center">
-                <lord-icon src="styles/img/sun.json" trigger="click" stroke="light" state="hover-pinch" color=" #FFFFFF"
-                    style="width:45px;height:45px;">
+                <lord-icon id="icon3" onclick="myFunction" src="styles/img/sun.json" trigger="click" stroke="light"
+                    state="hover-pinch" color=" #FFFFFF" style="width:45px;height:45px;">
                 </lord-icon>
             </div>
-            <div style="background: rgb(34, 38, 42);" class="switch-btn center">
-                <lord-icon src="styles/img/moon.json" trigger="click" stroke="light" state="hover-pinch"
+            <div style="background: var(--soft);" class="switch-btn center">
+                <lord-icon id="icon4" src="styles/img/moon.json" trigger="click" stroke="light" state="hover-pinch"
                     color=" #FFFFFF" style="width:60px;height:60px">
                 </lord-icon>
             </div>
@@ -144,8 +151,8 @@
 
         <div class="grid-item grid-item-7 center">
             <a href="https://github.com/LETRYKA" target="_blank">
-                <svg aria-hidden="true" class="octicon octicon-mark-github" height="63px" version="1.1"
-                    viewBox="0 0 16 16" width="63px">
+                <svg fill=" #ffffffbd" aria-hidden="true" class="octicon octicon-mark-github" height="63px"
+                    version="1.1" viewBox="0 0 16 16" width="63px">
                     <path fill=" #ffffffbd" class="transition"
                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
                     </path>
@@ -186,27 +193,27 @@
                 </div>
 
                 <div style="z-index: 2; margin-top: 20px;" class="row">
-                    <div class="log-icon center"><i style="color: white; font-size: 14px;"
+                    <div class="log-icon center"><i style="color: var(--main); font-size: 14px;"
                             class="fa-solid fa-wrench"></i>
                     </div>
                     <div style="margin-left: 20px;" class="column">
                         <h1>Saturday Nov 23, 2024</h1>
                         <p>Grid fixes</p>
                         <div style="background: rgb(255,0,0);
-background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266806722693) 100%); color: white;"
+background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266806722693) 100%); color: var(--main);"
                             class="status-btn center">FIXES</div>
                     </div>
                 </div>
 
                 <div style="z-index: 2; margin-top: 20px;" class="row">
-                    <div class="log-icon center"><i style="color: white; font-size: 14px;"
+                    <div class="log-icon center"><i style="color: var(--main); font-size: 14px;"
                             class="fa-solid fa-wrench"></i>
                     </div>
                     <div style="margin-left: 20px;" class="column">
                         <h1>Friday Nov 22, 2024</h1>
                         <p>First commit</p>
                         <div style="background: rgb(255,0,0);
-background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266806722693) 100%); color: white;"
+background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266806722693) 100%); color: var(--main);"
                             class="status-btn center">FIXES</div>
                     </div>
                 </div>
@@ -224,7 +231,7 @@ background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266
     <div style="gap: 15px; margin: 0 auto;" id="works" class="column center">
         <div class="cat"><i style="margin-right: 5px;" class="fa-solid fa-file"></i>Recent</div>
         <h1
-            style="font-family: Monument Extended Ultra Light; text-spacing: 1px; text-transform: uppercase; color:white; font-size: 35px;">
+            style="font-family: Monument Extended Ultra Light; letter-spacing: 1px; text-transform: uppercase; color: var(--main); font-size: 35px;">
             My Projects</h1>
         <p
             style="margin: 10px 20px 0 20px; text-align: center; color: #838383; max-width: 700px; font-size: 15px; line-height: 1.6rem;">
@@ -288,6 +295,12 @@ background: radial-gradient(circle, rgba(255,0,0,0) 0%, rgba(0,81,143,0.43323266
     </div>
 
 </body>
+
+<footer center>
+
+</footer>
+<script src="styles/main.js"></script>
+<script src="./index.js"></script>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </html>

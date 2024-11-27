@@ -73,6 +73,52 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --shadow: 0 8px 32px 0 rgba(0, 1, 15, 0.37);
+    --log-ovrl: linear-gradient(180deg, rgba(255, 0, 0, 0) 53%, rgba(23, 24, 32, 1) 100%);
+    --svg: #C2C3C4: --cat: #999999;
+    --avatar: radial-gradient(circle, rgba(31, 32, 42, 1) 0%, rgba(17, 17, 20, 1) 100%);
+    --border: #262626;
+    --bg: #090D11;
+    --soft: #24292E;
+    --main: white;
+    --primary-color: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
+    --secondary-color: #916CE7;
+    --third: #999999;
+    --fourth: ;
+    --mask: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+    --overlay-r: linear-gradient(-90deg, rgba(23, 24, 32, 1) 10%, rgba(17, 17, 20, 0) 52%);
+    --overlay-l: linear-gradient(90deg, rgba(23, 24, 32, 1) 10%, rgba(17, 17, 20, 0) 52%);
+}
+
+
+.light-theme {
+    --shadow: 0 8px 32px 0 rgba(152, 152, 152, 0.37);
+    --log-ovrl: linear-gradient(180deg, rgba(255, 255, 255, 0) 53%, rgb(255, 255, 255) 100%);
+    --svg: #C2C3C4;
+    --cat: black;
+    --avatar: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(219, 219, 219) 100%);
+    --border: #d3d3d3;
+    --bg: #E0DFE3;
+    --soft: #D8D8D8;
+    --main: black;
+    --primary-color: #ECEBEC;
+    --secondary-color: #916CE7;
+    --third: #999999;
+    --fourth: ;
+    --mask: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgb(255, 255, 255) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+    --overlay-r: linear-gradient(-90deg, #ECEBEC 10%, rgba(255, 255, 255, 0) 52%);
+    --overlay-l: linear-gradient(90deg, #ECEBEC 10%, rgba(255, 255, 255, 0) 52%);
+}
+
 * {
     font-family: General Sans, Sans-serif;
     scroll-behavior: smooth;
@@ -84,7 +130,7 @@ body {
     box-sizing: border-box;
     display: grid;
     place-content: center;
-    background: #090D11;
+    background: var(--bg);
     inset: 0;
     background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
         linear-gradient(to bottom, #80808012 1px, transparent 1px);
@@ -103,7 +149,7 @@ h6 {
 }
 
 a {
-    color: inherit;
+    color: var(--main);
     text-decoration: none;
 }
 
@@ -146,28 +192,29 @@ a {
 }
 
 .menu-container {
-    width: 306px;
-    height: 44px;
-    background: rgba(6, 6, 6, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(0, 1, 15, 0.37);
+    padding: 7px 10px 7px 10px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid #262626;
+    border: 1px solid var(--border);
     border-radius: 50px;
-    color: #FFFF;
+    color: var(--main);
     gap: 23px;
 }
 
 .menu-items {
     width: 81px;
     height: 32px;
-    background: rgba(39, 39, 39, 0.432);
-    box-shadow: 0 8px 32px 0 rgba(39, 39, 39, 0.37);
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 50px;
     cursor: pointer;
     font-size: 13px;
+}
+
+#mode {
+    background-color: black;
 }
 
 /* Grid */
@@ -210,9 +257,8 @@ a {
 
 .grid-item {
     display: flex;
-    background: rgb(24, 25, 33);
-    background: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
-    border: 1px solid #262626;
+    background: var(--primary-color);
+    border: 1px solid var(--border);
     cursor: pointer;
     border-radius: 24px;
     padding: 10px 65px;
@@ -228,10 +274,6 @@ a {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-}
-
-.grid-item:hover .hover {
-    opacity: 0.1;
 }
 
 .grid-item-1 {
@@ -313,13 +355,12 @@ a {
 .avatar {
     width: 110px;
     height: 110px;
-    background: rgb(31, 32, 42);
-    background: radial-gradient(circle, rgba(31, 32, 42, 1) 0%, rgba(17, 17, 20, 1) 100%);
+    background: var(--avatar);
     border-radius: 20px;
 }
 
 #profile h1 {
-    color: white;
+    color: var(--main);
     font-size: 1.4em;
     font-family: Monument Extended Ultra Light;
     letter-spacing: 1px;
@@ -330,18 +371,18 @@ a {
 #profile p {
     margin: 0;
     font-size: 14px;
-    color: #999999;
+    color: var(--third);
     margin-bottom: 18px;
 }
 
 .status {
     padding: 5px 10px 5px 10px;
     background: rgb(24, 25, 33);
-    background: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
-    border: 1px solid #262626;
+    background: var(--primary-color);
+    border: 1px solid var(--border);
     border-radius: 50px;
     font-size: 14px;
-    color: #999999;
+    color: var(--third);
     margin-top: -5px;
 }
 
@@ -374,11 +415,9 @@ a {
 }
 
 .category {
-    background: rgb(24, 25, 33);
-    background: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
-    border: 1px solid #262626;
+    border: 1px solid var(--border);
     display: inline-block;
-    color: #CCCCCC;
+    color: var(--third);
     font-size: 13px;
     border-radius: 50px;
     padding: 6px 10px 6px 10px;
@@ -402,7 +441,7 @@ a {
 }
 
 .text-wrapper h1 {
-    color: #999999;
+    color: var(--third);
     font-weight: 500;
     font-size: 14px;
     white-space: nowrap;
@@ -433,18 +472,19 @@ a {
     margin-top: 150px;
     padding: 10px 20px 10px 20px;
     position: absolute;
-    color: white;
+    color: var(--main);
     font-size: 14px;
     border-radius: 10px;
     background: rgba(24, 25, 33, 0.178);
     background: linear-gradient(135deg, rgba(24, 25, 33, 0.699) 0%, rgba(18, 20, 24, 0.788) 100%);
+    color: var(--soft);
     z-index: 999;
 }
 
 .grid-item-4 h4 {
     font-size: 0.9rem;
     font-weight: 500;
-    color: white;
+    color: var(--main);
 }
 
 .grid-item-4 h1 {
@@ -452,7 +492,7 @@ a {
     font-weight: 700;
     font-family: Monument Extended Ultra Light;
     letter-spacing: 1px;
-    color: white;
+    color: var(--main);
 }
 
 .grid-item-4 lord-icon {
@@ -474,20 +514,20 @@ a {
 .grid-item6 h4 {
     font-size: 0.75rem;
     font-weight: 500;
-    color: white;
+    color: var(--main);
 }
 
 .grid-item-6 h1 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: white;
+    color: var(--main);
 }
 
 .overlay-r {
     width: 30%;
     height: 100%;
     background: rgb(23, 24, 32);
-    background: linear-gradient(-90deg, rgba(23, 24, 32, 1) 10%, rgba(17, 17, 20, 0) 52%);
+    background: var(--overlay-r);
     z-index: 10;
 }
 
@@ -495,7 +535,7 @@ a {
     width: 30%;
     height: 100%;
     background: rgb(23, 24, 32);
-    background: linear-gradient(90deg, rgba(23, 24, 32, 1) 10%, rgba(17, 17, 20, 0) 52%);
+    background: var(--overlay-l);
     z-index: 10;
 }
 
@@ -508,11 +548,7 @@ a {
     position: relative;
     height: 82px;
     overflow: hidden;
-    mask-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 1) 20%,
-            rgba(0, 0, 0, 1) 80%,
-            rgba(0, 0, 0, 0));
+    mask-image: var(--mask);
 }
 
 @keyframes scrollLeft {
@@ -524,7 +560,7 @@ a {
 .item {
     width: 82px;
     height: 82px;
-    background: #24292E;
+    background: var(--soft);
     border-radius: 14px;
     position: absolute;
     left: max(calc(50px * 5), 100%);
@@ -554,13 +590,20 @@ a {
     animation-delay: calc(25s / 5 * (5 - 5) * -1);
 }
 
+.grid-item-7 svg path {
+    fill: var(--svg);
+}
+
+.grid-item-8 path {
+    fill: var(--svg);
+}
 
 .grid-item-7:hover path {
-    fill: #FFFFFF;
+    fill: var(--main);
 }
 
 .grid-item-8:hover path {
-    fill: #FFFFFF;
+    fill: var(--main);
 }
 
 .grid-item-8:hover circle {
@@ -612,15 +655,15 @@ a {
 .title h1 {
     font-size: 30px;
     font-weight: 600;
-    color: white;
+    color: var(--main);
 }
 
 .tag {
     background: rgb(24, 25, 33);
-    background: linear-gradient(135deg, rgba(24, 25, 33, 1) 0%, rgba(18, 20, 24, 1) 100%);
-    border: 1px solid #262626;
+    background: var(--primary-color);
+    border: 1px solid var(--border);
     display: inline-block;
-    color: #CCCCCC;
+    color: var(--main);
     font-size: 12px;
     border-radius: 50px;
     padding: 6px 18px 6px 18px;
@@ -640,18 +683,18 @@ a {
 
 .log-ovrl {
     background: rgb(255, 0, 0);
-    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 53%, rgba(23, 24, 32, 1) 100%);
+    background: var(--log-ovrl);
 }
 
 .log-icon {
     width: 50px;
     height: 50px;
-    background-color: #202b37;
+    background-color: var(--soft);
     border-radius: 50px;
 }
 
 .grid-item-9 h1 {
-    color: white;
+    color: var(--main);
     font-size: 14px;
     font-weight: 600;
     margin: 0;
@@ -659,14 +702,14 @@ a {
 
 .grid-item-9 p {
     margin: 0;
-    color: #999999;
+    color: var(--third);
     font-size: 12px;
     font-weight: 500;
 }
 
 .grid-item-9 h2 {
     font-size: 20px;
-    color: white;
+    color: var(--main);
     font-weight: 700;
     margin-top: 30px;
 }
@@ -675,7 +718,7 @@ a {
     font-size: 10px;
     padding: 4px 10px 4px 10px;
     border-radius: 50px;
-    border: 1px solid #262626;
+    border: 1px solid var(--border);
     margin-top: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -687,6 +730,26 @@ a {
     position: absolute;
     border-left: 1px dashed #616161;
     z-index: 1;
+}
+
+
+.grid-item-light {
+    display: flex;
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    border-radius: 24px;
+    padding: 10px 65px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dark {
+    color: black;
+}
+
+.light {
+    background-color: red;
 }
 
 
