@@ -38,11 +38,12 @@ mode.onclick = function () {
 
 let isFirstImage = true;
 
-mode.addEventListener("click", function() {
+mode.addEventListener("click", function () {
     if (isFirstImage) {
         icon5.src = "styles/img/sun.svg";
-      } else {
+    } else {
         icon5.src = "styles/img/moon.svg";
-      }
-      isFirstImage = !isFirstImage;
-    });
+    }
+    isFirstImage = !isFirstImage;
+});
+

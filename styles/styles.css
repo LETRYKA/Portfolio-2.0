@@ -1,5 +1,11 @@
 /* Monument */
 
+
+@font-face {
+    font-family: 'Bastliga One';
+    src: url('fonts/Bastliga\ One.woff');
+}
+
 @font-face {
     font-family: 'Monument Extended Ultra Light';
     src: url('fonts/MonumentExtended-Ultralight.otf');
@@ -129,7 +135,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     display: grid;
-    place-content: center;
+
     background: var(--bg);
     inset: 0;
     background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
@@ -223,7 +229,8 @@ a {
 
 .grid-container {
     max-width: 1150px;
-    margin: 1rem;
+    margin: 1rem auto;
+    padding: 0 25px 0 25px;
     display: grid;
     grid-auto-columns: 1fr;
     gap: 15px;
@@ -239,6 +246,8 @@ a {
 }
 
 .projects-container {
+    padding: 0 25px 0 25px;
+    margin: 60px auto;
     max-width: 1150px;
     display: grid;
     grid-auto-columns: 1fr;
@@ -639,8 +648,7 @@ a {
 }
 
 .title svg {
-    transform: rotate(-40deg);
-    fill: white;
+    fill: var(--main);
     opacity: 0.4;
 }
 
@@ -735,24 +743,7 @@ a {
 }
 
 
-.grid-item-light {
-    display: flex;
-    background: rgb(255, 255, 255);
-    border: 1px solid var(--border);
-    cursor: pointer;
-    border-radius: 24px;
-    padding: 10px 65px;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.dark {
-    color: black;
-}
-
-.light {
-    background-color: red;
-}
+/* FOOTER */
 
 
 @media only screen and (max-width: 1100px) {
