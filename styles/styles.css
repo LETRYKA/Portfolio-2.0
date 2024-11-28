@@ -253,7 +253,8 @@ a {
     grid-auto-columns: 1fr;
     gap: 15px;
     grid-template-areas:
-        "p1 p2";
+        "p1 p2"
+        "p3 p3";
 }
 
 .project-1 {
@@ -264,6 +265,11 @@ a {
 .project-2 {
     padding: 25px 0 25px 0 !important;
     grid-area: p2;
+}
+
+.project-3 {
+    padding: 25px 0 25px 0 !important;
+    grid-area: p3;
 }
 
 .grid-item {
@@ -742,6 +748,10 @@ a {
     z-index: 1;
 }
 
+.switch btn svg {
+    fill: red;
+}
+
 
 /* FOOTER */
 
@@ -815,9 +825,22 @@ a {
         height: 300px;
     }
 
+    .thumb {
+        width: 90% !important;
+    }
+
+    .title {
+        width: 90% !important;
+    }
+
+    .tag {
+        margin: 0 !important;
+    }
+
     .projects-container {
         grid-template-areas:
             "p1"
-            "p2";
+            "p2"
+            "p3";
     }
 }

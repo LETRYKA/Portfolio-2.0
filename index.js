@@ -3,7 +3,8 @@ var icon = document.getElementById("icon");
 var icon2 = document.getElementById("icon2");
 var icon3 = document.getElementById("icon3");
 var icon4 = document.getElementById("icon4");
-var icon5 = document.getElementById("icon5");
+var moon = document.getElementById("moon");
+var sun = document.getElementById("sun");
 
 // Light * Dark Mode Switcher
 
@@ -36,14 +37,13 @@ mode.onclick = function () {
 
 // Mode Switch Icon Changer
 
-let isFirstImage = true;
-
 mode.addEventListener("click", function () {
-    if (isFirstImage) {
-        icon5.src = "styles/img/sun.svg";
+    if (sun.style.display !== "none") {
+        moon.style.display = "flex"
+        sun.style.display = "none"
     } else {
-        icon5.src = "styles/img/moon.svg";
+        sun.style.display = "flex";
+        moon.style.display = "none"
     }
-    isFirstImage = !isFirstImage;
 });
 
