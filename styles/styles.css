@@ -202,8 +202,6 @@ a {
 }
 
 .menu-items {
-    width: 81px;
-    height: 32px;
     background: var(--primary-color);
     box-shadow: var(--shadow);
     backdrop-filter: blur(5px);
@@ -211,6 +209,10 @@ a {
     border-radius: 50px;
     cursor: pointer;
     font-size: 13px;
+}
+
+.menu-items span {
+    padding: 7px 20px 7px 20px;
 }
 
 #mode {
@@ -472,7 +474,7 @@ a {
     margin-top: 150px;
     padding: 10px 20px 10px 20px;
     position: absolute;
-    color: var(--main);
+    color: white;
     font-size: 14px;
     border-radius: 10px;
     background: rgba(24, 25, 33, 0.178);
@@ -755,6 +757,10 @@ a {
 
 @media only screen and (max-width: 1100px) {
 
+    #profile h1 {
+        font-size: 1.2em;
+    }
+
     .img-holder {
         padding: 0px 0 0px 0;
     }
@@ -772,6 +778,14 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
+
+    .menu-container {
+        gap: 10px;
+    }
+
+    .menu-items {
+        font-size: 11px;
+    }
 
     .grid-container {
         grid-template-areas:

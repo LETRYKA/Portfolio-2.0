@@ -9,7 +9,7 @@ var icon5 = document.getElementById("icon5");
 
 mode.onclick = function () {
     document.body.classList.toggle("light-theme");
-    if (document.body.classList.contains("dark-theme")) {
+    if (document.body.classList.contains(":root")) {
         icon.src = "styles/img/download.json";
         icon2.src = "styles/img/eye.json";
         icon3.src = "styles/img/Sun.json";
@@ -32,3 +32,17 @@ mode.onclick = function () {
         icon4.src = "styles/img/Moon.json";
     }
 }
+
+
+// Mode Switch Icon Changer
+
+let isFirstImage = true;
+
+mode.addEventListener("click", function() {
+    if (isFirstImage) {
+        icon5.src = "styles/img/sun.svg";
+      } else {
+        icon5.src = "styles/img/moon.svg";
+      }
+      isFirstImage = !isFirstImage;
+    });
